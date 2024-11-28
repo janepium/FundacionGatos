@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Apoyo - Fundación Gatitos</title>
+    <link rel="stylesheet" href="eliminar.css">
+    <link rel="stylesheet" href="css/eliminar.css" type="text/css"/>
+    <link rel="stylesheet" href="css/eliminar.css" type="text/css">
+
+ <!-- Enlazamos el CSS -->
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Eliminar Apoyo 🐾</h1>
+            <p>Ingresa el ID del apoyo que deseas eliminar de nuestra base de datos.</p>
+        </header>
+
+        <!-- Formulario de eliminación -->
+        <form action="eliminar-apoyo" method="POST">
+            <div class="form-group">
+                <label for="id">ID del Apoyo:</label>
+                <input type="text" id="id" name="id" placeholder="Ingresa el ID del apoyo" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Eliminar Apoyo</button>
+            </div>
+        </form>
+
+        <!-- Mensaje de éxito o error -->
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+</body>
+
+</html>
+

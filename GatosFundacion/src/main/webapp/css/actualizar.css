@@ -1,0 +1,127 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 28/11/2024, 12:54:46 a. m.
+    Author     : Valentina
+*/
+
+/* Estilo general para la página */
+/* Estilo general para la página */
+/* Estilo general para la página */
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe4e1; /* Rosa suave */
+    color: #4b0082; /* Púrpura oscuro */
+    margin: 0;
+    padding: 0;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    color: #ff69b4; /* Rosa vibrante */
+    text-shadow: 2px 2px #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    color: #4b0082;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ff69b4; /* Rosa vibrante */
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #ffb6c1; /* Rosa claro */
+    box-shadow: 0 0 8px #ffb6c1;
+}
+
+/* Botones */
+button {
+    background-color: #ff69b4; /* Rosa vibrante */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1493; /* Rosa intenso */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del formulario de actualización */
+#formActualizar {
+    margin-top: 20px;
+}
+
+/* Botón especial */
+.cat-button {
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cat-button:hover {
+    background-color: #ff1493;
+    transform: scale(1.1);
+}
+
+/* Agregando decoración con gatitos */
+.container::before {
+    content: '🐱'; 
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 100px;
+}
+
+.container::after {
+  content: '🐱'; 
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 100px;
+}

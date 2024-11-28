@@ -1,0 +1,8 @@
+com\mycompany\PruebaConexion.class
+com\mycompany\ServletRegistroApoyo.class
+com\mycompany\EliminarApoyoServlet.class
+com\mycompany\Conexion.class
+com\mycompany\gatosfundacion\JakartaRestConfiguration.class
+com\mycompany\gatosfundacion\resources\JakartaEE8Resource.class
+com\mycompany\ServletBuscar.class
+com\mycompany\ServletActualizarApoyo.class

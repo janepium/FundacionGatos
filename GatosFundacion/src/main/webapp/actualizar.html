@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Registro</title>
+    <link rel="stylesheet" href="css/actualizar.css" type="text/css">
+    <script>
+        // Función para buscar datos por ID
+        async function buscarPorId() {
+            const id = document.getElementById('idBuscar').value.trim();
+            if (!id) {
+                alert('Por favor, ingresa un ID para buscar.');
+                return;
+            }
+
+            try {
+                // Hacer una solicitud al servlet para obtener los datos
+                const response = await fetch(`actualizar?id=${id}`);
+                if (!response.ok) {
+                    throw new Error('Error al buscar el ID.');
+                }
+                const data = await response.json();
+
+                // Llenar los campos del formulario con los datos obtenidos
+                document.getElementById('id').value = data.id;
+                document.getElementById('name').value = data.nombre;
+                document.getElementById('email').value = data.correo;
+                document.getElementById('phone').value = data.celular;
+                document.getElementById('supportType').value = data.apoyo;
+                document.getElementById('message').value = data.mensaje;
+
+                // Mostrar el formulario de actualización
+                document.getElementById('formActualizar').style.display = 'block';
+            } catch (error) {
+                alert('ID no encontrado o error en la búsqueda.');
+                console.error(error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Actualizar Registro 🐾</h1>
+
+        <!-- Formulario para buscar por ID -->
+        <div class="form-group">
+            <label for="idBuscar">Buscar por ID:</label>
+            <input type="text" id="idBuscar" placeholder="Ingresa el ID del registro" />
+            <button type="button" onclick="buscarPorId()">Buscar</button>
+        </div>
+
+        <!-- Formulario para actualizar (oculto hasta que se busque un ID) -->
+        <form id="formActualizar" action="actualizar" method="post" style="display: none;">
+            <div class="row">
+                <div class="form-group">
+                    <!-- ID (Solo lectura) -->
+                    <label for="id">ID:</label>
+                    <input class="form-control" id="id" type="text" name="id" readonly />
+                </div>
+                <div class="form-group">
+                    <!-- Nombre -->
+                    <label for="name">Nombre:</label>
+                    <input class="form-control" id="name" type="text" name="nombre" required />
+                </div>
+                <div class="form-group">
+                    <!-- Correo -->
+                    <label for="email">Correo:</label>
+                    <input class="form-control" id="email" type="email" name="correo" required />
+                </div>
+                <div class="form-group">
+                    <!-- Celular -->
+                    <label for="phone">Celular:</label>
+                    <input class="form-control" id="phone" type="tel" name="celular" required />
+                </div>
+                <div class="form-group">
+                    <!-- Tipo de Apoyo -->
+                    <label for="supportType">Tipo de Apoyo:</label>
+                    <select class="form-control" id="supportType" name="apoyo" required>
+                        <option value="" disabled>Selecciona el tipo de apoyo</option>
+                        <option value="donacion">Donación</option>
+                        <option value="voluntariado">Voluntariado</option>
+                        <option value="adopcion">Adopción</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <!-- Mensaje -->
+                    <label for="message">Mensaje:</label>
+                    <textarea class="form-control" id="message" name="mensaje" required></textarea>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="cat-button">Actualizar Registro 🐾</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+

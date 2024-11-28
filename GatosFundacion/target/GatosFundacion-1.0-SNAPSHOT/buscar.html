@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Registro</title>
+    <link rel="stylesheet" href="buscar.css">
+    <link rel="stylesheet" href="css/buscar.css" type="text/css"/>
+    <link rel="stylesheet" href="css/buscar.css" type="text/css">
+
+
+    <script>
+        async function buscarPorId() {
+            const id = document.getElementById('idBuscar').value.trim();
+            const resultSection = document.getElementById('resultSection');
+            const resultMessage = document.getElementById('resultMessage');
+
+            resultMessage.innerHTML = ''; // Limpiar mensaje previo
+            resultSection.style.display = 'none'; // Ocultar la sección de resultados
+
+            if (!id) {
+                alert('Por favor, ingresa un ID válido.');
+                return;
+            }
+
+            try {
+                const response = await fetch(`buscar?id=${id}`);
+                if (response.status === 404) {
+                    resultMessage.innerHTML = '<p class="error">Registro no encontrado.</p>';
+                    return;
+                }
+                if (!response.ok) {
+                    throw new Error('Error en la búsqueda.');
+                }
+
+                const data = await response.json();
+                // Mostrar los datos obtenidos
+                document.getElementById('idResult').textContent = data.id;
+                document.getElementById('nameResult').textContent = data.nombre;
+                document.getElementById('emailResult').textContent = data.correo;
+                document.getElementById('phoneResult').textContent = data.celular;
+                document.getElementById('supportTypeResult').textContent = data.apoyo;
+                document.getElementById('messageResult').textContent = data.mensaje;
+
+                resultSection.style.display = 'block'; // Mostrar la sección de resultados
+            } catch (error) {
+                console.error(error);
+                resultMessage.innerHTML = '<p class="error">Ocurrió un error al buscar el registro.</p>';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Buscar Registro 🐾</h1>
+
+        <!-- Formulario para buscar por ID -->
+        <div class="form-group">
+            <label for="idBuscar">Ingresa el ID para buscar:</label>
+            <input type="text" id="idBuscar" placeholder="ID del registro" />
+            <button type="button" onclick="buscarPorId()">Buscar</button>
+        </div>
+
+        <!-- Mensaje de error o éxito -->
+        <div id="resultMessage"></div>
+
+        <!-- Sección de resultados (inicialmente oculta) -->
+        <div id="resultSection" style="display: none;">
+            <h2>Resultados:</h2>
+            <p><strong>ID:</strong> <span id="idResult"></span></p>
+            <p><strong>Nombre:</strong> <span id="nameResult"></span></p>
+            <p><strong>Correo:</strong> <span id="emailResult"></span></p>
+            <p><strong>Celular:</strong> <span id="phoneResult"></span></p>
+            <p><strong>Tipo de Apoyo:</strong> <span id="supportTypeResult"></span></p>
+            <p><strong>Mensaje:</strong> <span id="messageResult"></span></p>
+        </div>
+    </div>
+</body>
+</html>

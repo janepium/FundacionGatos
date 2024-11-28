@@ -1,0 +1,140 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27/11/2024, 11:13:52 p. m.
+    Author     : Valentina
+*/
+/* Estilo general */
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Encabezado */
+header h1 {
+    color: #f76c6c;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #f76c6c;
+    outline: none;
+}
+
+/* Estilo para el botón de eliminar */
+.btn-submit {
+    background-color: #f76c6c;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #e05d5d;
+}
+
+/* Estilo para mensajes */
+.mensaje {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4caf50;
+}
+
+/* Animación para los mensajes */
+.mensaje.success {
+    color: #4caf50;
+}
+
+.mensaje.error {
+    color: #f44336;
+}
+
+/* Agregar detalles de gatitos para hacerlo más divertido */
+body::before {
+    content: "🐱";
+    font-size: 60px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveCat 3s infinite alternate;
+}
+
+@keyframes moveCat {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+/* Fondo bonito con huellas de gato */
+.container {
+    background-image: url('https://i.pinimg.com/originals/af/cd/4e/afcd4ec4f23371b3c49861d5cd3643fc.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+    background-attachment: fixed;
+}
+

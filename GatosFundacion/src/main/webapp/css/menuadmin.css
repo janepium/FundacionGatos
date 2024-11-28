@@ -1,0 +1,107 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27/11/2024, 8:18:25 p. m.
+    Author     : Valentina
+*/
+
+/* Reseteo de márgenes y paddings */
+/* Estilos generales */
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff7f0; /* Color suave que recuerda a un ambiente cálido y acogedor */
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background-color: #ffcc00; /* Color amarillo que recuerda a la calidez y alegría de los gatos */
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Tipografía juguetona que evoca diversión */
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Menú de opciones */
+nav {
+    margin-top: 30px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 15px 25px;
+}
+
+.menu-option {
+    display: block;
+    padding: 20px 40px;
+    text-decoration: none;
+    background-color: #ff6f61; /* Un color cálido que complementa el tema de gatos */
+    color: white;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad */
+}
+
+.menu-option:hover {
+    background-color: #ff4c38; /* Cambio de color a un tono más fuerte en hover */
+    transform: scale(1.05); /* Hace que el botón se agrande un poco al pasar el mouse */
+}
+
+.menu-option:active {
+    background-color: #e04036; /* Un tono más oscuro al hacer clic */
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 12px 25px;
+}
+
+/* Estilos adicionales para iconos o imágenes de gatos (opcional) */
+header h1::before {
+    content: "🐱"; /* Emoticono de gato antes del título */
+    font-size: 36px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+

@@ -1,0 +1,115 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 27/11/2024, 5:05:42 p. m.
+    Author     : Valentina
+*/
+
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce5cd; /* Fondo cálido como un gato */
+    color: #444;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://source.unsplash.com/1600x900/?cat'); /* Imagen temática */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    background-color: #fff; /* Fondo blanco para contraste */
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Título */
+.login-container h1 {
+    font-size: 1.8rem;
+    color: #f08080; /* Rosa pastel */
+    margin-bottom: 1.5rem;
+    font-family: 'Comic Sans MS', cursive; /* Toque divertido */
+}
+
+/* Estilo de los campos */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+/* Efecto al enfocar */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #f08080;
+    box-shadow: 0 0 5px rgba(240, 128, 128, 0.5);
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    background-color: #f08080; /* Rosa pastel */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+/* Efecto hover */
+.login-button:hover {
+    background-color: #ff6b6b; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Ligera ampliación */
+}
+
+/* Mensaje de error */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
